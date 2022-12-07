@@ -32,6 +32,9 @@ class SiteInfo(models.Model):
     # Hero Section
     name = models.CharField(null=False, max_length=50)
     profession = models.CharField(max_length=50)
+    telegram_link = models.URLField(blank=True)
+    github_link = models.URLField(blank=True)
+    linkedin_link = models.URLField(blank=True)
     # About Section
     my_photo = models.ImageField(blank=True)
     about_me = models.TextField(blank=True, max_length=500)

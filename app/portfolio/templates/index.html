@@ -62,9 +62,17 @@
       <h1>{{ info.name }}</h1>
       <p>I'm {{ info.profession }}</p>
       <div class="social-links">
+        {% if info.telegram_link %}
         <a href="https://t.me/C_Joker" class="telegram"><i class="bx bxl-telegram"></i></a>
+        {% endif %}
+
+        {% if info.github_link %}
         <a href="https://github.com/Shvalov-I" class="github"><i class="bx bxl-github"></i></a>
+        {% endif %}
+
+        {% if info.linkedin_link %}
         <a href="https://linkedin.com/in/иван-швалов-3b157022a" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        {% endif %}
       </div>
     </div>
   </section><!-- End Hero -->
