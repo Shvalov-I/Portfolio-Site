@@ -32,17 +32,17 @@ class SiteInfo(models.Model):
     # Hero Section
     name = models.CharField(null=False, max_length=50)
     profession = models.CharField(max_length=50)
-    telegram_link = models.URLField(blank=True)
-    github_link = models.URLField(blank=True)
-    linkedin_link = models.URLField(blank=True)
+    telegram_link = models.URLField(blank=True, null=True)
+    github_link = models.URLField(blank=True, null=True)
+    linkedin_link = models.URLField(blank=True, null=True)
     # About Section
-    my_photo = models.ImageField(blank=True)
-    about_me = models.TextField(blank=True, max_length=500)
-    about_profession = models.TextField(blank=True, max_length=500)
-    website = models.URLField(blank=True)
-    email = models.EmailField(blank=True)
-    city = models.CharField(blank=True, max_length=50)
-    resume_file = models.FileField(blank=True)
+    my_photo = models.ImageField(blank=True, null=True)
+    about_me = models.TextField(blank=True, max_length=500, null=True)
+    about_profession = models.TextField(blank=True, max_length=500, null=True)
+    website = models.URLField(blank=True, null=True)
+    email = models.EmailField(blank=True, null=True)
+    city = models.CharField(blank=True, max_length=50, null=True)
+    resume_file = models.FileField(blank=True, null=True)
     # Skills Section
     about_skills = models.TextField(max_length=500)
     # Portfolio Section
