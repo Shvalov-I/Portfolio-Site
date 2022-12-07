@@ -106,7 +106,9 @@
                 </ul>
               </div>
             </div>
+            {% if info.resume_file %}
               <button type="submit" name="button" class="btn mv-1 active" onclick="location.href='{% url 'download' %}'">Скачать резюме</button>
+            {% endif %}
           </div>
         </div>
 
