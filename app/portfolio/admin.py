@@ -17,11 +17,13 @@ class SiteInfoAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Hero Section',
          {
-             'fields': ['name', 'profession']
+             'fields': ['name', 'profession', 'telegram_link',
+                        'github_link', 'linkedin_link']
          }),
         ('About Section',
          {
-             'fields': ['my_photo', 'about_me', 'about_profession', 'resume_file']
+             'fields': ['my_photo', 'about_me', 'about_profession',
+                        'website', 'email', 'city', 'resume_file']
          }),
         ('Skills Section',
          {
