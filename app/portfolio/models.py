@@ -6,9 +6,8 @@ from django.core.exceptions import ValidationError
 class PortfolioProject(models.Model):
     title = models.CharField(max_length=50, unique=True)
     image = models.ImageField(null=False)
-    about_project = models.TextField(null=True, blank=True, max_length=500)
-    link = models.URLField(null=True, blank=True)
-    github_link = models.URLField(null=True, blank=True)
+    about_project = models.TextField(blank=True, max_length=100)
+    github_link = models.URLField(blank=True)
     data_filter = models.CharField(max_length=20, null=False)
 
 
@@ -34,10 +33,13 @@ class SiteInfo(models.Model):
     name = models.CharField(null=False, max_length=50)
     profession = models.CharField(max_length=50)
     # About Section
-    my_photo = models.ImageField(null=True, blank=True)
-    about_me = models.TextField(max_length=500)
-    about_profession = models.TextField(max_length=500)
-    resume_file = models.FileField()
+    my_photo = models.ImageField(blank=True)
+    about_me = models.TextField(blank=True, max_length=500)
+    about_profession = models.TextField(blank=True, max_length=500)
+    website = models.URLField(blank=True)
+    email = models.EmailField(blank=True)
+    city = models.CharField(blank=True, max_length=50)
+    resume_file = models.FileField(blank=True)
     # Skills Section
     about_skills = models.TextField(max_length=500)
     # Portfolio Section
