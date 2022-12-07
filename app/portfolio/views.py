@@ -10,7 +10,7 @@ def index_view(request):
     all_project = PortfolioProject.objects.all()
     filters = set([project.data_filter for project in all_project])
     skills = SkillsBar.objects.all()
-    site_info = SiteInfo.objects.get(pk=1)
+    site_info = SiteInfo.objects.get(main_page=True)
     # Делим навыки на две части, чтобы разделить их на две соседние таблицы
     first_skills = skills[:len(skills) // 2 + 1]
     second_skills = skills[len(skills) // 2 + 1::]
@@ -19,7 +19,7 @@ def index_view(request):
 
 
 def download_view(request):
-    site_info = SiteInfo.objects.get(pk=1)
+    site_info = SiteInfo.objects.get(main_page=True)
     # Передаётся адрес файла без первого символа,
     # потому что путь файла "/media/resume.pdf" не считывается
     response = FileResponse(open(site_info.resume_file.url[1:], 'rb'))

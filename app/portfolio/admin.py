@@ -33,6 +33,10 @@ class SiteInfoAdmin(admin.ModelAdmin):
          {
              'fields': ['about_portfolio']
          }),
+        ('Main Page',
+         {
+             'fields': ['main_page']
+         }),
     ]
     list_display = ['name', 'profession']
 
