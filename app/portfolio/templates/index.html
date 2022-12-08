@@ -115,7 +115,9 @@
               </div>
             </div>
             {% if info.resume_file %}
-              <button type="submit" name="button" class="btn mv-1 active" onclick="location.href='{% url 'download' %}'">Скачать резюме</button>
+            <a href="{{ info.resume_file.url }}">
+              <button class="btn btn-outline">Скачать резюме</button>
+            </a>
             {% endif %}
           </div>
         </div>
