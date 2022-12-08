@@ -28,6 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', os.getenv('SERVER_IP', default=None)]
 
+CSRF_TRUSTED_ORIGINS = [os.getenv('SITE_LINK')]
 
 # Application definition
 
