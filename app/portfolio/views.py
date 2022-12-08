@@ -24,5 +24,4 @@ def download_view(request):
     site_info = SiteInfo.objects.get(main_page=True)
     # Передаётся адрес файла без первого символа,
     # потому что путь файла "/media/resume.pdf" не считывается
-    path_to_file = Path().cwd() / site_info.resume_file.url[1:]
-    return FileResponse(path_to_file.open('rb'))
+    return FileResponse(open(site_info.resume_file.url[1:], 'rb'))
