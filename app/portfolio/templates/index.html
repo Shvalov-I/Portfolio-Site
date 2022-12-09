@@ -95,7 +95,7 @@
           <div class="col-lg-8 pt-4 pt-lg-0 content">
             <h3>{{ info.profession }}.</h3>
             <p class="fst-italic">
-              {{ info.about_profession }}
+              {{ info.about_qualities }}
             </p>
             <div class="row">
               <div class="col-lg-6">
@@ -114,6 +114,9 @@
                 </ul>
               </div>
             </div>
+            <p class="">
+              {{ info.about_profession }}
+            </p>
             {% if info.resume_file %}
             <a href="{{ info.resume_file.url }}">
               <button class="btn btn-outline">Скачать резюме</button>
