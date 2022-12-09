@@ -38,6 +38,7 @@ class SiteInfo(models.Model):
     # About Section
     my_photo = models.ImageField(blank=True, null=True)
     about_me = models.TextField(blank=True, max_length=500, null=True)
+    about_qualities = models.TextField(blank=True, max_length=500, null=True)
     about_profession = models.TextField(blank=True, max_length=500, null=True)
     website = models.URLField(blank=True, null=True)
     email = models.EmailField(blank=True, null=True)

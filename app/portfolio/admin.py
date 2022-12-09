@@ -22,7 +22,7 @@ class SiteInfoAdmin(admin.ModelAdmin):
          }),
         ('About Section',
          {
-             'fields': ['my_photo', 'about_me', 'about_profession',
+             'fields': ['my_photo', 'about_me', 'about_qualities', 'about_profession',
                         'website', 'email', 'city', 'resume_file']
          }),
         ('Skills Section',
@@ -38,5 +38,5 @@ class SiteInfoAdmin(admin.ModelAdmin):
              'fields': ['main_page']
          }),
     ]
-    list_display = ['name', 'profession']
+    list_display = ['name', 'profession', 'main_page']
 
